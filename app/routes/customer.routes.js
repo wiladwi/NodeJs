@@ -6,6 +6,29 @@ module.exports = app => {
     //create  a new referral code
     app.post("/referrals",referrals.create);
 
+    // // Retrieve single referral
+    app.get("/referrals/:referralId",referrals.findOne);
+
+     // // Retrieve all referral
+    app.get("/referrals",referrals.findAll);
+
+    // uPdate a single referrals
+    app.put("/referrals/:referralId",referrals.update);
+
+    // //Delete a referrals with referrals ID
+    app.delete("/referrals/:referralId",referrals.hapus);
+  
+
+    // // delete All referrals
+    app.delete("/referrals",referrals.deleteAll);
+
+
+
+
+
+
+
+
 
 
 
@@ -23,7 +46,7 @@ module.exports = app => {
     // app.put("/customers/:customerId",customers.update);
 
     // //Delete a customer with customer ID
-    // app.delete("customers/:customerId",customers.delete);
+    // app.delete("/customers/:customerId",customers.delete);
     
     // // delete All customers
 
